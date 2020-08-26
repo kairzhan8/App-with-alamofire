@@ -85,11 +85,12 @@
                             <outlet property="delegate" destination="agh-Iu-Hte" id="gqu-7Y-uiE"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Posts" id="F90-uO-cxK"/>
+                    <tabBarItem key="tabBarItem" title="Posts" image="tray.full" catalog="system" id="SeP-4U-xxk"/>
+                    <navigationItem key="navigationItem" title="Posts" id="YeG-Bm-VkE"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mj8-wh-Kdx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262.3188405797102" y="57.589285714285708"/>
+            <point key="canvasLocation" x="2172.463768115942" y="57.589285714285708"/>
         </scene>
         <!--Post DetailVC-->
         <scene sceneID="WeI-y6-soH">
@@ -131,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puP-VL-Bwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1989" y="62"/>
+            <point key="canvasLocation" x="2898.5507246376815" y="61.607142857142854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i4M-Nd-OIm">
@@ -144,12 +145,138 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="agh-Iu-Hte" kind="relationship" relationship="rootViewController" id="6L5-Xz-afA"/>
+                        <segue destination="dYG-wc-tIe" kind="relationship" relationship="rootViewController" id="6L5-Xz-afA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpb-AW-lvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="353.62318840579712" y="57.589285714285708"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5FX-8u-be6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dYG-wc-tIe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="41a-12-V5e"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DJT-Bp-Lhr">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="agh-Iu-Hte" kind="relationship" relationship="viewControllers" id="sXr-Cz-c1m"/>
+                        <segue destination="UPP-tM-8bg" kind="relationship" relationship="viewControllers" id="DAr-3q-nuY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMp-bK-G67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262.3188405797102" y="57.589285714285708"/>
+        </scene>
+        <!--Add post-->
+        <scene sceneID="k5b-2d-HtO">
+            <objects>
+                <viewController id="UPP-tM-8bg" customClass="AddPostViewController" customModule="App_with_alamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qv9-Ck-2jQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-CE-Vok">
+                                <rect key="frame" x="20" y="128" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserId:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQN-lN-RK1">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7b-bz-Deg">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WPv-xP-TMV">
+                                <rect key="frame" x="20" y="182" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEe-EO-jwL">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8IT-6q-aw7">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OwA-Sf-yXj">
+                                <rect key="frame" x="20" y="236" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2x-jg-bzV">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-ve-as8">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bH-Np-9Hg">
+                                <rect key="frame" x="132" y="300" width="150" height="30"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GuS-GG-Uht"/>
+                                </constraints>
+                                <state key="normal" title="Add post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addPost" destination="UPP-tM-8bg" eventType="touchUpInside" id="wdG-UO-gKM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WPv-xP-TMV" firstAttribute="top" secondItem="ppO-CE-Vok" secondAttribute="bottom" constant="20" id="9Ds-hE-Lty"/>
+                            <constraint firstItem="RbZ-0p-ASM" firstAttribute="trailing" secondItem="OwA-Sf-yXj" secondAttribute="trailing" constant="20" id="Q31-Wq-6eX"/>
+                            <constraint firstItem="RbZ-0p-ASM" firstAttribute="trailing" secondItem="WPv-xP-TMV" secondAttribute="trailing" constant="20" id="TG7-z3-oag"/>
+                            <constraint firstItem="ppO-CE-Vok" firstAttribute="leading" secondItem="RbZ-0p-ASM" secondAttribute="leading" constant="20" id="U8m-4R-NnH"/>
+                            <constraint firstItem="WPv-xP-TMV" firstAttribute="leading" secondItem="RbZ-0p-ASM" secondAttribute="leading" constant="20" id="aHm-k6-2FD"/>
+                            <constraint firstItem="8bH-Np-9Hg" firstAttribute="centerX" secondItem="Qv9-Ck-2jQ" secondAttribute="centerX" id="dMe-V6-W6s"/>
+                            <constraint firstItem="OwA-Sf-yXj" firstAttribute="top" secondItem="WPv-xP-TMV" secondAttribute="bottom" constant="20" id="e3U-iR-B6I"/>
+                            <constraint firstItem="OwA-Sf-yXj" firstAttribute="leading" secondItem="RbZ-0p-ASM" secondAttribute="leading" constant="20" id="iWR-hk-Y1m"/>
+                            <constraint firstItem="8bH-Np-9Hg" firstAttribute="top" secondItem="OwA-Sf-yXj" secondAttribute="bottom" constant="30" id="iWs-42-mFr"/>
+                            <constraint firstItem="ppO-CE-Vok" firstAttribute="top" secondItem="RbZ-0p-ASM" secondAttribute="top" constant="40" id="kLg-qq-Ict"/>
+                            <constraint firstItem="RbZ-0p-ASM" firstAttribute="trailing" secondItem="ppO-CE-Vok" secondAttribute="trailing" constant="20" id="lEG-oM-JQG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RbZ-0p-ASM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add post" image="pencil" catalog="system" id="Hg3-g2-Z6d"/>
+                    <navigationItem key="navigationItem" id="ObL-2Z-qdZ"/>
+                    <connections>
+                        <outlet property="postBody" destination="wcP-ve-as8" id="RFx-C7-aAO"/>
+                        <outlet property="postTitle" destination="8IT-6q-aw7" id="xyk-tJ-IG6"/>
+                        <outlet property="postUserId" destination="K7b-bz-Deg" id="R1o-bZ-uD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ns5-yx-0mm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2115.9420289855075" y="778.79464285714278"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="tray.full" catalog="system" width="128" height="88"/>
+    </resources>
 </document>

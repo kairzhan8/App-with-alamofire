@@ -17,6 +17,7 @@
 		554AE9E824F6835C0059D18E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AE9E724F6835C0059D18E /* PostCell.swift */; };
 		554AE9EB24F685930059D18E /* Extension + PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AE9EA24F685930059D18E /* Extension + PostsVC.swift */; };
 		554AE9EF24F69A790059D18E /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AE9EE24F69A790059D18E /* PostDetailVC.swift */; };
+		554AE9F124F6A5220059D18E /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AE9F024F6A5220059D18E /* AddPostViewController.swift */; };
 		75B4ED6AA0E01CCF64F222B8 /* Pods_App_with_alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30D6196A022532B02CB1648 /* Pods_App_with_alamofire.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		554AE9E724F6835C0059D18E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		554AE9EA24F685930059D18E /* Extension + PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + PostsVC.swift"; sourceTree = "<group>"; };
 		554AE9EE24F69A790059D18E /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
+		554AE9F024F6A5220059D18E /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		5C80F6E7B747ED6C13B0AB14 /* Pods-App with alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App with alamofire.release.xcconfig"; path = "Target Support Files/Pods-App with alamofire/Pods-App with alamofire.release.xcconfig"; sourceTree = "<group>"; };
 		A43AA46816BACA77A8F23560 /* Pods-App with alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App with alamofire.debug.xcconfig"; path = "Target Support Files/Pods-App with alamofire/Pods-App with alamofire.debug.xcconfig"; sourceTree = "<group>"; };
 		B30D6196A022532B02CB1648 /* Pods_App_with_alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_with_alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 				554AE9E224F64C140059D18E /* PostsViewController.swift */,
 				554AE9EA24F685930059D18E /* Extension + PostsVC.swift */,
 				554AE9EE24F69A790059D18E /* PostDetailVC.swift */,
+				554AE9F024F6A5220059D18E /* AddPostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				554AE9CB24F643450059D18E /* AppDelegate.swift in Sources */,
 				554AE9CD24F643450059D18E /* SceneDelegate.swift in Sources */,
 				554AE9EF24F69A790059D18E /* PostDetailVC.swift in Sources */,
+				554AE9F124F6A5220059D18E /* AddPostViewController.swift in Sources */,
 				554AE9E524F64C7C0059D18E /* Posts.swift in Sources */,
 				554AE9EB24F685930059D18E /* Extension + PostsVC.swift in Sources */,
 				554AE9E824F6835C0059D18E /* PostCell.swift in Sources */,

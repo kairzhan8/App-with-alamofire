@@ -18,6 +18,10 @@ class PostsViewController: UICollectionViewController {
         super.viewDidLoad()
         fetchData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchData()
+    }
 
     // MARK: UICollectionViewDataSource
 
@@ -49,22 +53,17 @@ class PostsViewController: UICollectionViewController {
         AF.request(url).validate().responseJSON { responseData in
             switch responseData.result {
             case .success(let value):
-                guard let jsonData = value as? Array<[String:Any]> else { return }
-                for dictPost in jsonData {
-                    let post = Post(id: (dictPost["id"] as? Int)!,
-                                    title: (dictPost["title"] as? String)!,
-                                    body: (dictPost["body"] as? String)!)
-                    self.posts.append(post)
-                    
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
+                self.posts = Post.getPosts(from: value)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
                 }
             case .failure(let error):
                 print(error)
             }
+            
         }
-    }
-    
+        
+        
 
+}
 }
